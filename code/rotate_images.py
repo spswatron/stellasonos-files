@@ -19,6 +19,6 @@ def rotate_images(directory, rotated_directory):
                 continue
 
 dirname = pathlib.Path(__file__).parent.resolve()
-source_dir = os.path.join(dirname, '../images/test-images')
-rotated_dir = os.path.join(dirname, '../rotated_images/test-images')
+source_dir = os.path.join(dirname, '../images')
+rotated_dir = os.path.join(dirname, '../rotated_images')
 rotate_images(source_dir, rotated_dir)
