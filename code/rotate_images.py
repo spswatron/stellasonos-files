@@ -12,7 +12,9 @@ def rotate_images(directory, rotated_directory):
             try:
                 original_image = Image.open(path)
                 rotated_image = original_image.rotate(-90)
+                rotated_image = rotated_image.convert('RGB')
                 rotated_path = os.path.join(rotated_directory, filename)
+                rotated_path = rotated_path.replace(".png", ".jpg")
                 rotated_image.save(rotated_path)
                 print("saved " + rotated_path + "!")
             except:
